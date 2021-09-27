@@ -1,0 +1,32 @@
+
+<h1 class="titre">Parent compo</h1>
+<hr>
+
+<div class="compo">
+    <app-child
+    [myMessage1]="'toto'"
+    [myVariable]="variable1"
+    [myData1]="data1"
+    [myData2]="data2"
+    [myDataObs$]="dataObs$"
+    [myDataFn]="dataFn()"
+    
+    (sendMessage1)="receptionFromChild($event)">
+</app-child>
+</div>
+
+<h2>Passons à présent dans le compo parent !</h2>
+
+<p>Message provenant de l'enfant --------------> messageReceptionFromChild=<b>{{ messageReceptionFromChild }}</b></p>
+<p>Eh, regarde : voici un observable ----------> {{ dataObs$|async}}</p>
+<button (click)="compteurChildFromParent()">Go !</button>
+<p>Afficher le compteur de l'enfant à partir du parent : {{ counter }}</p>
+<p #child2>Un élément paragraphe test pour utiliser ElementRef et la méthode nativeElement</p>
+
+
+<h2>Test de ngOnChanges</h2>
+<button (click)="clickUpdateMyMessage()">ngOnChanges detection</button>
+
+
+<h2>Accès à n'importe quel élément HTML</h2>
+<input #someInput placeholder="Votre langage de dév préféré">

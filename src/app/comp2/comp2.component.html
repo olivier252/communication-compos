@@ -1,0 +1,13 @@
+<h1 class="titre">Compo 2</h1>
+<hr>
+<div>
+   <p>comp2 works!</p>
+   <p>1 - Réception par variable ------> getMessage1()={{getMessage1()}}</p>
+   <button (click)="cliqueUpdateService()">changer le texte par variable</button>
+   <p>2 - Réception par observable ----> messageSubject={{subjectIUser|async}}</p>
+   <button (click)="cliqueUpdateObservable()">changer le texte par l'observable</button>
+
+   <p>Afficher ma variable stringVariable = {{ stringVariable }}</p>
+
+   <app-comp3></app-comp3>
+</div>

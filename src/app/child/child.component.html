@@ -1,0 +1,16 @@
+<h1 class="titre">Child compo</h1>
+<h2>réception des données du parent dans le compo enfant :</h2>
+<p>(1) myMessage1={{myMessage1}}</p>
+<p>(2) myVariable={{myVariable}}</p>
+<p>(3) myData1={{myData1|json}}</p>
+<p>(4) myDataObs$={{myDataObs$|async}}</p>
+<button (click)=clickSendMessage()>Click !</button>
+<p>Compteur child incrément : {{ counter }}</p>
+<p>Un élément paragraphe test pour utiliser ElementRef et la méthode nativeElement</p>
+
+<div>
+    <h2>Modification d'une variable </h2>
+
+    <button (click)="data = 'Modifié par l\'enfant'">modifier data</button>
+    <p>data = {{ data }}</p>
+</div>
